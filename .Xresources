@@ -1,0 +1,16 @@
+! -------------------------------------------------------------
+! IMPORTS
+! -------------------------------------------------------------
+
+! Colors - all color files are available in ~/.colors
+#include ".Xresources.d/colors/x-erotion"
+
+! Configs - all files that contains configs for other programs
+#include ".Xresources.d/urxvt"
+
+! -------------------------------------------------------------
+! FONTS
+! -------------------------------------------------------------
+*.font-regular:  monospace   regular   10
+*.font-bold:     monospace   bold      9
+
