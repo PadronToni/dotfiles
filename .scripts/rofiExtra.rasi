@@ -1,0 +1,156 @@
+
+// Color Scheme ----------------------------------
+#csRow {
+    orientation:        horizontal;
+    margin:             0 ${mar} ${mar} ${mar};
+    expand:             false;
+    children:   [ csBorder, csSpacer ];
+}
+#csSpacer {
+    orientation:        horizontal;
+}
+
+#csBorder {
+    orientation:        horizontal;
+    padding:            0; 
+    border-radius:      ${radius};
+    background-color:   ${bag}50;
+    expand:             false;
+    children:           [ textbox-colors, textbox-color0, textbox-color8, textbox-color1, textbox-color9, textbox-color2, textbox-color10, textbox-color3, textbox-color11, textbox-color4, textbox-color12, textbox-color5, textbox-color13, textbox-color6, textbox-color14, textbox-color7, textbox-color15  ];
+}
+#textbox-colors {
+    padding:            ${pad};
+    font:               \"${fontBold} ${fontSize}\";
+    str:                \"Color Scheme\";
+    background-color:   ${bag};
+    expand:             false;
+}
+#textbox-color0 {
+    padding:            ${pad};
+    border:             0 0 4 0;
+    font:               \"${fontBold} ${fontSize}\";
+    str:                \"0\";
+	border-color:   	${color0};
+    expand:             false;
+}
+#textbox-color8 {
+    padding:            ${pad};
+    border:             0 0 4 0;
+	font:               \"${fontBold} ${fontSize}\";
+	str:                \"8\";
+	border-color:   ${color8};
+	expand:             false;
+}
+#textbox-color1 {
+    padding:            ${pad};
+    border:             0 0 4 0;
+    font:               \"${fontBold} ${fontSize}\";
+    str:                \"1\";
+    border-color:   ${color1};
+	expand:             false;
+}
+#textbox-color9 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"9\";
+    border-color:   ${color9};
+	expand:         false;
+}
+#textbox-color2 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"2\";
+    border-color:   ${color2};
+	expand:         false;
+}
+#textbox-color10 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"10\";
+    border-color:   ${color10};
+	expand:         false;
+}
+#textbox-color3 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"3\";
+    border-color:   ${color3};
+	expand:         false;
+}
+#textbox-color11 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"11\";
+    border-color:   ${color11};
+	expand:         false;
+}
+#textbox-color4 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"4\";
+    border-color:   ${color4};
+	expand:         false;
+}
+#textbox-color12 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"12\";
+    border-color:   ${color12};
+	expand:         false;
+}
+#textbox-color5 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"5\";
+    border-color:   ${color5};
+	expand:         false;
+}
+#textbox-color13 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"13\";
+    border-color:   ${color13};
+	expand:         false;
+}
+#textbox-color6 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"6\";
+    border-color:   ${color6};
+	expand:         false;
+}
+#textbox-color14 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"14\";
+    border-color:   ${color14};
+	expand:         false;
+}
+#textbox-color7 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"7\";
+    border-color:   ${color7};
+	expand:         false;
+}
+#textbox-color15 {
+    padding:        ${pad};
+    border:             0 0 4 0;
+    font:           \"${fontBold} ${fontSize}\";
+    str:            \"15\";
+    border-color:   ${color15};
+}
+
+
