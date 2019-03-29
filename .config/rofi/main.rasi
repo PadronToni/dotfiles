@@ -1,0 +1,154 @@
+
+/**
+ * ROFI Dynamic Color Theme
+ * User: KLR
+ */
+* {
+    margin:                     0;
+    spacing:                    0;
+    border:                     0;
+    scrollbar:                  false;
+    text-color:                 #c7ccd1;
+    background-color:           transparent;
+  	font:                       "hack regular 9";
+    highlight:                  bold underline ;
+
+    /* Custom */
+    defaultBg:                  #1c2023;
+    semitraBg:                  #1c202380;
+    windowBg:                   #1c202380;
+
+    normal-normal-text:         #c7ccd1;
+    normal-urgent-text:         #c7ae95;
+    normal-active-text:         #95c7ae;
+    selected-normal-text:       #aec795;
+    selected-urgent-text:       @defaultBg;
+    selected-active-text:       @defaultBg;
+    selected-normal-background: @defaultBg;
+    selected-urgent-background: #c7ae95;
+    selected-active-background: #95c7ae;
+}
+
+#window {
+    fullscreen:         false;
+    location:           north;
+    anchor:             north;
+    width:              100%;
+    children: [ mainbox ];
+}
+
+
+#mainbox {
+    border:             2px 0 0 0;
+    border-color:       #1c2023;
+    background-color:   @windowBg;
+    children:   [ inputbarBorder, listview, message, sidebar ];
+}
+
+
+//  Inputbar  ----------------------------------------------
+
+#inputbarBorder {
+    margin:             15px 15px 0 15px;
+    orientation:        horizontal;
+    expand:             false;
+    children: [ dummy, inputbar, dummy ];
+}
+#inputbar {
+    border-radius:      6px;
+    background-color:   @semitraBg;
+    expand:             false;
+    children:   [ textbox-search, entry ];
+}
+#case-indicator {
+    margin:             0 15px 0 0;
+}
+#entry {
+    orientation:        vertical;
+    width:              20em;
+    padding:            8px;
+}
+#textbox-search {
+    padding:            8px 12px 8px 12px;
+    border-radius:      6px;
+    font:               "FontAwesome 9"; 
+    str:                "";
+    text-color:         #c795ae;
+    background-color:   @defaultBg;
+    expand:             false;
+}
+
+#dummy {
+    orientation:        horizontal;
+    expand:             true;
+}
+
+//  Sidebar ------------------------------------------------
+#sidebar {
+    margin:             15px;
+    border-radius:      6px;
+    background-color:   @semitraBg;
+    expand: true;
+}
+#button {
+    padding:            12px;
+}
+#button.selected {
+    border-radius:      6px;
+    text-color:         #aec795;
+    background-color:   @defaultBg;
+}
+
+//  Listview    --------------------------------------------
+#listview {
+	columns:            2;
+    margin:             15px 15px 0 15px;
+    padding:            8px;
+    border-radius:      6px;
+    background-color:   @semitraBg;
+    expand:             false;
+}
+#element {
+    padding: 8px;
+    border-radius:      6px;
+    expand:             false;
+}
+#element.normal.normal {
+    text-color:         @normal-normal-text;
+}
+#element.normal.urgent {
+    text-color:         @normal-urgent-text;
+}
+#element.normal.active {
+    text-color:         @normal-active-text;
+}
+#element.selected.normal {
+    background-color:   @selected-normal-background;
+    text-color:         @selected-normal-text;
+}
+#element.selected.urgent {
+    background-color:   @selected-urgent-background;
+    text-color:         @selected-urgent-text;
+}
+#element.selected.active {
+    background-color:   @selected-active-background;
+    text-color:         @selected-active-text;
+}
+#element.alternate.normal {
+    text-color:         @normal-normal-text;
+}
+#element.alternate.urgent {
+    text-color:         @normal-urgent-text;
+}
+#element.alternate.active {
+    text-color:         @normal-active-text;
+}
+
+#message {
+    margin:             15px;
+    padding:            12px;
+    border-radius:      6px;
+    background-color:   @defaultBg;
+}
+
+

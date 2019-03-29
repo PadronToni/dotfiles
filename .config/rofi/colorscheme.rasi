@@ -1,0 +1,295 @@
+
+/**
+ * ROFI Dynamic Color Theme
+ * User: KLR
+ */
+
+* {
+    margin:                     0;
+    spacing:                    0;
+    border:                     0;
+    scrollbar:                  false;
+    text-color:                 #c7ccd1;
+    background-color:           transparent;
+  	font:                       "hack regular 9";
+    highlight:                  bold underline ;
+
+    /* Custom */
+    defaultBg:                  #1c2023;
+    semitraBg:                  #1c202370;
+    windowBg:                   #1c202350;
+
+    normal-normal-text:         #c7ccd1;
+    normal-urgent-text:         #c7ae95;
+    normal-active-text:         #95c7ae;
+    selected-normal-text:       #aec795;
+    selected-urgent-text:       @defaultBg;
+    selected-active-text:       @defaultBg;
+    selected-normal-background: @defaultBg;
+    selected-urgent-background: #c7ae95;
+    selected-active-background: #95c7ae;
+}
+
+#window {
+    fullscreen:         true;
+    location:           center;
+    anchor:             center;
+    children: [ mainbox ];
+}
+
+
+#mainbox {
+    background-color:   @semitraBg;
+    children:   [ mainBorder ];
+}
+
+mainBorder {
+    margin:             0 20% 0 20%;
+    children:   [ dummy, inputbarBorder, listview, message, csBorder, dummy ];
+}
+
+//  Inputbar  ----------------------------------------------
+#inputbarBorder {
+    margin:             15px 15px 0 15px;
+    orientation:        horizontal;
+    expand:             false;
+    children: [ dummy, inputbar, dummy ];
+}
+#inputbar {
+    border-radius:      6px;
+    background-color:   @semitraBg;
+    expand:             false;
+    children:   [ textbox-search, entry ];
+}
+#entry {
+    orientation:        vertical;
+    width:              20em;
+    padding:            8px;
+}
+#textbox-search {
+    padding:            8px 12px 8px 12px;
+    border-radius:      6px;
+    font:               "FontAwesome 9"; 
+    str:                "";
+    text-color:         #c795ae;
+    background-color:   @defaultBg;
+    expand:             false;
+}
+
+#dummy {
+    expand:             true;
+}
+
+//  Listview    --------------------------------------------
+#listview {
+    margin:             15px 15px 0 15px;
+    padding:            12px;
+    border-radius:      6px;
+    background-color:   @defaultBg;
+    expand:             false;
+}
+#element {
+    padding: 6px;
+}
+#element.normal.normal {
+    text-color:         @normal-normal-text;
+}
+#element.normal.urgent {
+    text-color:         @normal-urgent-text;
+}
+#element.normal.active {
+    text-color:         @normal-active-text;
+}
+#element.selected.normal {
+    background-color:   @selected-normal-background;
+    text-color:         @selected-normal-text;
+}
+#element.selected.urgent {
+    background-color:   @selected-urgent-background;
+    text-color:         @selected-urgent-text;
+}
+#element.selected.active {
+    background-color:   @selected-active-background;
+    text-color:         @selected-active-text;
+}
+#element.alternate.normal {
+    text-color:         @normal-normal-text;
+}
+#element.alternate.urgent {
+    text-color:         @normal-urgent-text;
+}
+#element.alternate.active {
+    text-color:         @normal-active-text;
+}
+
+#message {
+    margin:             15px;
+    padding:            12px;
+    border-radius:      6px;
+    background-color:   @defaultBg;
+}
+
+// Color Scheme ----------------------------------
+#csBorder {
+    orientation:        horizontal;
+    margin:             0 15px 15px 15px;
+    //margin:             15px;
+    padding:            0; 
+    border-radius:      6px;
+    background-color:   @semitraBg;
+    expand:             false;
+    children:           [ textbox-colors, textbox-color0, textbox-color8, textbox-color1, textbox-color9, textbox-color2, textbox-color10, textbox-color3, textbox-color11, textbox-color4, textbox-color12, textbox-color5, textbox-color13, textbox-color6, textbox-color14, textbox-color7, textbox-color15  ];
+}
+#textbox-colors {
+    padding:            12px;
+    font:               "hack bold 9";
+    str:                "Color Scheme";
+    background-color:   #1c2023;
+}
+#textbox-color0 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:               "hack bold 9";
+    str:                "0";
+	text-color:   	#15181a;
+	border-color:   	#15181a;
+    expand:             false;
+}
+#textbox-color8 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+	font:               "hack bold 9";
+	str:                "8";
+	text-color:   #747c84;
+	border-color:   #747c84;
+	expand:             false;
+}
+#textbox-color1 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:               "hack bold 9";
+    str:                "1";
+    text-color:   #c7ae95;
+    border-color:   #c7ae95;
+	expand:             false;
+}
+#textbox-color9 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "9";
+    text-color:   #c7ae95;
+    border-color:   #c7ae95;
+	expand:         false;
+}
+#textbox-color2 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "2";
+    text-color:   #95c7ae;
+    border-color:   #95c7ae;
+	expand:         false;
+}
+#textbox-color10 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "10";
+    text-color:   #95c7ae;
+    border-color:   #95c7ae;
+	expand:         false;
+}
+#textbox-color3 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "3";
+    text-color:   #aec795;
+    border-color:   #aec795;
+	expand:         false;
+}
+#textbox-color11 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "11";
+    text-color:   #aec795;
+    border-color:   #aec795;
+	expand:         false;
+}
+#textbox-color4 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "4";
+    text-color:   #ae95c7;
+    border-color:   #ae95c7;
+	expand:         false;
+}
+#textbox-color12 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "12";
+    text-color:   #ae95c7;
+    border-color:   #ae95c7;
+	expand:         false;
+}
+#textbox-color5 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "5";
+    text-color:   #c795ae;
+    border-color:   #c795ae;
+	expand:         false;
+}
+#textbox-color13 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "13";
+    text-color:   #c795ae;
+    border-color:   #c795ae;
+	expand:         false;
+}
+#textbox-color6 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "6";
+    text-color:   #95aec7;
+    border-color:   #95aec7;
+	expand:         false;
+}
+#textbox-color14 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "14";
+    text-color:   #95aec7;
+    border-color:   #95aec7;
+	expand:         false;
+}
+#textbox-color7 {
+    padding:            12px 1% 6px 1%;
+    border:             0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "7";
+    text-color:   #c7ccd1;
+    border-color:   #c7ccd1;
+	expand:         false;
+}
+#textbox-color15 {
+    padding:            12px 1% 6px 1%;
+    border:         0 0 6px 0;
+    font:           "hack bold 9";
+    str:            "15";
+    text-color:   #f3f4f5;
+    border-color:   #f3f4f5;
+	expand:         false;
+}
+
+
+

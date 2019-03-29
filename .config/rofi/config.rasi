@@ -1,0 +1,19 @@
+
+configuration {
+	modi: "window,Dirs:/home/barbarossa/.config/rofi/search.sh,combi";
+	combi-modi: "drun,run";
+	sidebar-mode: true;
+    yoffset:40;
+	lines: 8;
+
+//  Those change the "modi" names displayed 
+	display-combi:        "Applications";
+	display-window:       "Windows";
+	display-run:          " ";
+	display-drun:         "";
+	display-keys:         "SHORT-KEYS";
+}
+
+@import "/home/barbarossa/.config/rofi/main.rasi"
+
+
