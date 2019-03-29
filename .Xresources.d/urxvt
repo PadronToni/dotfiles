@@ -2,7 +2,9 @@
 ! URxvt configs
 ! ------------------------------------------------------------------------------
 
-! font spacing
+! font
+URxvt.font:         xft:hack:size=9
+URxvt.boldFont:     xft:hack:size=9:bold
 URxvt*letterSpace:		0
 URxvt.lineSpace:		1
 
@@ -10,18 +12,21 @@ URxvt.lineSpace:		1
 URxvt*saveline:			15000
 URxvt*termName:			rxvt-256color
 URxvt*iso14755:			false
+URxvt*iso14755_52:		false
 URxvt*urgentOnBell:		true
 
 ! appearance
-URxvt*depth:			0
-URxvt*scrollBar:		false
-URxvt*scrollBar_right:	false
-URxvt*internalBorder:	15
-URxvt*externalBorder:	0
+URxvt.scrollBar:		false
+URxvt.internalBorder:	20
+URxvt.intensityStyles:  true
 URxvt.geometry:			84x22
 
-! perl extensions
-URxvt.perl-ext-common:	default,clipboard,url-select,keyboard-select
+
+! ---------------
+! PERL EXTENSION
+! ---------------
+
+URxvt.perl-ext-common:	clipboard,resize-font,url-select,keyboard-select
 
 ! macros for clipboard and selection
 URxvt.copyCommand:		xclip -i -selection clipboard
@@ -31,18 +36,16 @@ URxvt.keysym.M-v:		perl:clipboard:paste
 URxvt.keysym.M-C-v:		perl:clipboard:paste_escaped
 URxvt.keysym.M-Escape:	perl:keyboard-select:activate
 URxvt.keysym.M-s:		perl:keyboard-select:search
+! url-select
 URxvt.keysym.M-u:		perl:url-select:select_next
 URxvt.urlLauncher:		chromium
 URxvt.underlineURLs:	true
 URxvt.urlButton:		1     
+!! resize-font
+URxvt.resize-font.smaller: M-j
+URxvt.resize-font.bigger:  M-k
 
 ! scroll one line
 URxvt.keysym.Shift-Up:		command:\033]720;1\007
 URxvt.keysym.Shift-Down:	command:\033]721;1\007
-
-! control arrow
-URxvt.keysym.Control-Up:	\033[1;5A
-URxvt.keysym.Control-Down:	\033[1;5B
-URxvt.keysym.Control-Right:	\033[1;5C
-URxvt.keysym.Control-Left:	\033[1;5D
 
